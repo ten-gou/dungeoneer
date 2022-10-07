@@ -1,0 +1,10 @@
+{
+    "class": [
+        {"className": "Fighter"}, 
+        {"className": "Rogue"},
+        {"className": "Wizard"},
+        {"className": "Cleric"},
+        {"className": "Dancer"},
+        {"className": "Monk"} 
+    ]
+}
