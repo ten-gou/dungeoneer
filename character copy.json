@@ -1,0 +1,18 @@
+[
+    {
+        "id": "jejc-pukv-nefe", 
+        "name": "Test", 
+        "status": "alive", 
+        "gender": "male", 
+        "level": 1, 
+        "exp": 0, 
+        "class": "Fighter", 
+        "hp": 20, 
+        "str": 20, 
+        "con": 20,
+        "dex": 20, 
+        "int": 20, 
+        "wis": 20, 
+        "cha": 20
+    }
+]

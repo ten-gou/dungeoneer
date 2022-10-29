@@ -1,10 +1,69 @@
 {
     "class": [
-        {"className": "Fighter"}, 
-        {"className": "Rogue"},
-        {"className": "Wizard"},
-        {"className": "Cleric"},
-        {"className": "Dancer"},
-        {"className": "Monk"} 
+        {
+            "className": "Fighter",
+            "hp": 30,
+            "hpscale": 15,
+            "str": 18,
+            "con": 16,
+            "dex": 14,
+            "int": 10,
+            "wis": 10,
+            "cha": 10
+        }, 
+        {
+            "className": "Rogue",
+            "hp": 20,
+            "hpscale": 12,
+            "str": 10,
+            "con": 14,
+            "dex": 18,
+            "int": 16,
+            "wis": 10,
+            "cha": 12
+        },
+        {
+            "className": "Wizard",
+            "hp": 15,
+            "hpscale": 9,
+            "str": 10,
+            "con": 10,
+            "dex": 14,
+            "int": 18,
+            "wis": 16,
+            "cha": 14
+        },
+        {
+            "className": "Cleric",
+            "hp": 20,
+            "hpscale": 12,
+            "str": 10,
+            "con": 12,
+            "dex": 10,
+            "int": 14,
+            "wis": 18,
+            "cha": 16
+        },
+        {   "className": "Dancer",
+            "hp": 25,
+            "hpscale": 15,
+            "str": 18,
+            "con": 16,
+            "dex": 14,
+            "int": 10,
+            "wis": 10,
+            "cha": 10
+        },
+        {
+            "className": "Monk",
+            "hp": 20,
+            "hpscale": 13,
+            "str": 12,
+            "con": 14,
+            "dex": 18,
+            "int": 10,
+            "wis": 16,
+            "cha": 12
+        } 
     ]
 }

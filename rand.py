@@ -1,4 +1,4 @@
-from random import random
+from random import randint, random
 import json
 import pprint
 import random
@@ -14,7 +14,6 @@ def randKey():
         number += 1
         if number == 4 or number == 8 or number == 12:
             string += "-"
-    print(string)
     return string
 
 def randChara():
@@ -32,5 +31,24 @@ def randChara():
     #class
     with open('classData.json') as classJSON:
         classData = json.load(classJSON)
+        selectClass = classData['class'][random.randint(0,5)]
+
+    charData = {
+        'id': randKey(),
+        'name': rand_name,
+        'status': 'alive',
+        'gender': gender,
+        'level': 1,
+        'exp': 0,
+        'class': selectClass['className'],
+        'hp': selectClass['hp'],
+        'hpscale': selectClass['hpscale'],
+        'str': selectClass['str'],
+        'con': selectClass['con'],
+        'dex': selectClass['dex'],
+        'int': selectClass['int'],
+        'wis': selectClass['wis'],
+        'cha': selectClass['cha']
+    }
     
-    print(rand_name + ', a ' + gender + ' ' + str(classData['class'][random.randint(0,5)]['className']))
+    return charData
