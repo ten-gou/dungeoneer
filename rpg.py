@@ -1,6 +1,7 @@
 import json
 from pprint import pprint
-from rand import randKey, randChara
+from venv import create
+from rand import randKey, randChara, selectChara
 from verify import verify
 from charUpdate import characterCheck, createCharacter
 
@@ -18,6 +19,7 @@ if start == 'a' or start == 'A':
     key = input()
     char = characterCheck(key)
     print(char)
+    print(char['name'])
 else:
     print('Would you like to:')
     print('[A] search for a specific person?')
@@ -25,6 +27,7 @@ else:
     newChara = verify(2)
     if newChara == 'a' or newChara == 'A':
         print('Very well, then.')
+        createCharacter(selectChara())
     else:
         print('May luck guide you to the character you desire')
         createCharacter(randChara())

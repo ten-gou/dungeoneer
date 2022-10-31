@@ -3,6 +3,7 @@ import json
 import pprint
 import random
 import names
+from verify import numConvert, verify
 
 #generate randkey for character
 def randKey():
@@ -15,6 +16,57 @@ def randKey():
         if number == 4 or number == 8 or number == 12:
             string += "-"
     return string
+
+def selectChara():
+    #male/female
+    print('Would you like to travel with:')
+    print('[A] a male?')
+    print('[B] a female?')
+    mf = verify(2)
+    if mf == 'a' or mf == 'A':
+        gender = 'male'
+    elif mf == 'b' or mf == 'B':
+        gender = 'female'
+
+    #class
+    print('Would you like them to be:')
+    print('[A] a Fighter?')
+    print('[B] a Rogue?')
+    print('[C] a Wizard?')
+    print('[D] a Cleric?')
+    print('[E] a Dancer?')
+    print('[F] a Monk?')
+    charClass = verify(6)
+    num = numConvert(charClass)
+
+    with open('classData.json') as classJSON:
+        classData = json.load(classJSON)
+        selectClass = classData['class'][num]
+
+    #name
+    print('Lastly, what is their name?')
+    charName = input()
+
+    #dataseed
+    charData = {
+        'id': randKey(),
+        'name': charName,
+        'status': 'alive',
+        'gender': gender,
+        'level': 1,
+        'exp': 0,
+        'class': selectClass['className'],
+        'hp': selectClass['hp'],
+        'hpscale': selectClass['hpscale'],
+        'str': selectClass['str'],
+        'con': selectClass['con'],
+        'dex': selectClass['dex'],
+        'int': selectClass['int'],
+        'wis': selectClass['wis'],
+        'cha': selectClass['cha']
+    }
+
+    return charData
 
 def randChara():
     #male or female and random name
