@@ -30,4 +30,6 @@ else:
         char = characterCheck(key['id'])
     else:
         print('May luck guide you to the character you desire')
-        createCharacter(randChara())
+        key = randChara()
+        createCharacter(key)
+        char = characterCheck(key['id'])
