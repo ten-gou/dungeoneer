@@ -1,7 +1,7 @@
 import json
 from pprint import pprint
 from venv import create
-from rand import randKey, randChara, selectChara
+from rand import randChara, selectChara
 from verify import verify
 from charUpdate import characterCheck, createCharacter
 
@@ -18,8 +18,6 @@ if start == 'a' or start == 'A':
     print('Call upon the key that binds you to your traveler:')
     key = input()
     char = characterCheck(key)
-    print(char)
-    print(char['name'])
 else:
     print('Would you like to:')
     print('[A] search for a specific person?')
