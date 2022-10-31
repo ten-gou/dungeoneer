@@ -25,7 +25,9 @@ else:
     newChara = verify(2)
     if newChara == 'a' or newChara == 'A':
         print('Very well, then.')
-        createCharacter(selectChara())
+        key = selectChara()
+        createCharacter(key)
+        char = characterCheck(key['id'])
     else:
         print('May luck guide you to the character you desire')
         createCharacter(randChara())
