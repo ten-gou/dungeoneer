@@ -56,14 +56,14 @@ def selectChara():
         'level': 1,
         'exp': 0,
         'class': selectClass['className'],
-        'hp': selectClass['hp'],
+        'hp': selectClass['hp'] + random.randint(0, 1),
         'hpscale': selectClass['hpscale'],
-        'str': selectClass['str'],
-        'con': selectClass['con'],
-        'dex': selectClass['dex'],
-        'int': selectClass['int'],
-        'wis': selectClass['wis'],
-        'cha': selectClass['cha']
+        'str': selectClass['str'] + random.randint(0, 1),
+        'con': selectClass['con'] + random.randint(0, 1),
+        'dex': selectClass['dex'] + random.randint(0, 1),
+        'int': selectClass['int'] + random.randint(0, 1),
+        'wis': selectClass['wis'] + random.randint(0, 1),
+        'cha': selectClass['cha'] + random.randint(0, 1)
     }
 
     return charData

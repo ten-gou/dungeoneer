@@ -3,7 +3,7 @@ from pprint import pprint
 from venv import create
 from rand import randChara, selectChara
 from verify import verify
-from charUpdate import characterCheck, createCharacter
+from charUpdate import characterCheck, createCharacter, levelUp
 
 #randKey() creates a random key for new characters
 #verify() is a multiple choice input verification for a proper input
@@ -33,3 +33,12 @@ else:
         key = randChara()
         createCharacter(key)
         char = characterCheck(key['id'])
+
+print("would you like to level up?\n[A] yes\n[B] no")
+newlevel = verify(2)
+
+if newlevel == 'a' or newlevel == 'A':
+    print("level up!")
+    levelUp(char)
+else:
+    print("no level up")
